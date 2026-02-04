@@ -1,21 +1,20 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/miniconda
 {
-	"name": "Miniconda (Python 3)",
-  "image": "ghcr.io/pge383-hpc/assignment_name_placeholder/python-devcontainer:latest",
-  "extensions": [ 
-      "ms-python.python",
-      "ms-toolsai.jupyter"
-   ],
-  "settings": { 
-        "python.defaultInterpreterPath": "/opt/conda/bin/python",
-        "python.terminal.activateEnvironment": true,
-				"jupyter.kernels.excludePythonEnvironments": [
-          "/usr/bin/python3"
-        ],
-        },
-  // "postCreateCommand": '',
-  // "postStartCommand": ''
+	"name":  "Julia 1.12",
+  "image": "ghcr.io/pge383-hpc/assignment_name_placeholder/julia-devcontainer:latest",
+  "extensions": [
+    "julialang.language-julia",
+    "ms-python.python",
+    "ms-toolsai.jupyter"
+  ],
+ "settings": { 
+			 "jupyter.kernels.excludePythonEnvironments": [
+         "/usr/bin/python3"
+       ]
+	}
+	// "postCreateCommand": '',
+	// "postStartCommand": 'julia -e "using Pkg; Pkg.activate(pwd()); Pkg.instantiate()"'
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.

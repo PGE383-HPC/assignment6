@@ -27,4 +27,4 @@ source $HOME/.bash_profile
 alias lla > lla.txt
 ```
  
-followed by the command `python test.py` at the command prompt.  A status message of `OK` indicates you have the correct answer. 
+followed by the command `julia --project=. test/runtests.jl` at the command prompt.  A status message of `Test Summary: ... Test Passed` indicates you have the correct answer.
