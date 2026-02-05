@@ -16,5 +16,14 @@
 using Test
 
 @testset "TestSolution" begin
-    # Tests will be provided by the solution repository
+    
+    @testset "test_lla" begin
+        lla_content = read("lla.txt", String)
+        first_line = strip(split(lla_content, "\n")[1])
+        split_line = split(first_line)
+        
+        @test split_line[1] == "alias"
+        @test split_line[2] == "lla='ls"
+        @test split_line[3] == "-la'"
+    end
 end
